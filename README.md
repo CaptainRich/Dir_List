@@ -24,5 +24,5 @@ output going to the output file (dir_list.txt).  Note the suffix ".py" is requir
 3. Python Ultimate Guide (web download, source unknown) 
 
 ## File List
-**dir_list.py** - a small module with the 'worker' routines.
-**directory_scan.py** - the main program (invoke this file).
+**dir_list.py** - a small module with the 'worker' routines.  
+**directory-scan.py** - the main program (invoke this file).  
