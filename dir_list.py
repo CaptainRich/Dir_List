@@ -34,7 +34,7 @@ def scan_directory( path, num_blanks, file_IO, o_file ):
                     print( output_string )
 
                 sub_path = path + '/' + entry.name                           # Build the path to the subdirectory
-                scan_directory( sub_path, num_blanks+4, file_IO, o_file )    # Increase the indent level for this subdirectory
+                scan_directory( sub_path, num_blanks+3, file_IO, o_file )    # Increase the indent level for this subdirectory
 
 
 

@@ -9,7 +9,7 @@ import datetime           # Used to time-stamp the output file
 
 ###################################################################################################
 # Function to generate the output file title block.
-def file_title( o_file ):
+def file_title( o_file, path ):
     title = '\n' + 'Directory scan of: ' + str( out_path ) + '\n'
     o_file.write( title )
     date = datetime.datetime.now()
@@ -17,6 +17,7 @@ def file_title( o_file ):
     o_file.write( title )
     title = 'by: Richard Ay, September 2023' + '\n\n'
     o_file.write( title )
+    o_file.write( path+'\n' )
 
 ###################################################################################################
 # Main
@@ -40,7 +41,7 @@ with out_path.open( mode='w', encoding='utf-8' ) as o_file:
 
     # Setup the file title.  See https://www.w3schools.com/python/python_datetime.asp
     # for details on date/time formats.
-    file_title( o_file )
+    file_title( o_file, path )
 
     # Recursively scan all of the directories below the specified path.
     dir_list.scan_directory( path, num_blanks, file_IO, o_file )

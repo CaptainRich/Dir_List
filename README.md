@@ -28,9 +28,9 @@ This utility can be invoked in several ways:
 
 The program prompts for two data items:
 1) The name of the output (text) file.
-2) 
+2) The full pathname of the directory to scan.
 
-The output file (specified by the user) is written to the target directory that is scanned.
+Once this data is entered, the scan commences and the output file is generated. The output file (specified by the user) is written to the target directory that is scanned.
 
 ## References
 1. Python for You and Me, Kushal Das, Feb 17, 2021  
@@ -42,6 +42,6 @@ The output file (specified by the user) is written to the target directory that 
 **directory-scan.py** - the main program (invoke this file).  
 
 ## Sample Output
-The image below shows a sample output:
+The image above shows a sample output:
 ![Sample Scan](https://github.com/CaptainRich/dir_list/blob/main/scan-output.png)
 
