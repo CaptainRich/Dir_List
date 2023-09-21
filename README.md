@@ -1,4 +1,4 @@
-# $`\textcolor{blue}{\text{Dir_List}}`$
+# $`\textcolor{blue}{\text{Directory-Scan}}`$
 A routine to scan a directory and list all subdirectories, recursively, as deep as necessary.
 Richard Ay (August 2023, *updated September 2023*)
 
