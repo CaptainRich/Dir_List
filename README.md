@@ -32,6 +32,9 @@ The program prompts for two data items:
 
 Once this data is entered, the scan commences and the output file is generated. The output file (specified by the user) is written to the target directory that is scanned.
 
+*(To use this program, copy both 'directory-scan.py' and 'dir_list.py' to a directory on a local drive.  Invoke the program 
+as indicated above.)*
+
 ## References
 1. Python for You and Me, Kushal Das, Feb 17, 2021  
 2. Python Basics: A practical Introduction to Python 3, David Amos, Dan Bader, 2022  
