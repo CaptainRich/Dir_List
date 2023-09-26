@@ -26,6 +26,7 @@ def scan_directory( path, num_blanks, file_IO, o_file ):
     with os.scandir(path) as it:
         for entry in it:
             if not entry.name.startswith('.') and entry.is_dir():
+                
                 # Print or write the directory name, then scan it.
                 output_string = " "*num_blanks + entry.name + '\n'
                 if( file_IO ):

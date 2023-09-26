@@ -7,6 +7,7 @@ Richard Ay (August 2023, *updated September 2023*)
 * [References](#references)
 * [Usage](#Usage)
 * [File List](#file-list)
+* [Technologies and Imports](#Technologies-and-Imports)
 * [Sample Output](#sample-output)
 
 ## Setup
@@ -36,7 +37,14 @@ Once this data is entered, the scan commences and the output file is generated. 
 
 ## File List
 **dir_list.py** - a small module with the 'worker' routines.  
-**directory-scan.py** - the main program (invoke this file).  
+**directory-scan.py** - the main program (invoke this file).   
+
+## Technologies and Imports
+The following modules are necessary imports (imported in the .py files):  
+- os
+- datetime
+- dirlist
+- pathlib
 
 ## Sample Output
 The image above shows a sample output:
