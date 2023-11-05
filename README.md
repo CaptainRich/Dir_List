@@ -4,8 +4,9 @@ Richard Ay (August 2023, *updated September 2023*)
 
 ## $`\textcolor{blue}{\text{Table of Contents}}`$
 * [Setup](#setup)
-* [References](#references)
+* [Environment](#environment)
 * [Usage](#Usage)
+* [References](#references)
 * [File List](#file-list)
 * [Technologies and Imports](#Technologies-and-Imports)
 * [Sample Output](#sample-output)
@@ -13,6 +14,21 @@ Richard Ay (August 2023, *updated September 2023*)
 ## Setup
 
 *(To use this program, copy both 'directory-scan.py' and 'dir_list.py' to a directory on a local drive.  Then invoke the program as indicated below.)* 
+
+## Environment
+To utilize this scripts, a virtual environment is created so that the installation of EasyGUI remains
+local to this subdirectory, and does not affect the rest of the machine.
+
+The virtual environment can be setup using the command: 
+**'python -m venv "GUIenv" --upgrade-deps --prompt="GUIenv"'**
+
+To start/stop the virtual environment, use the commands: **'GUIenv\scripts\activate'** or **'deactivate'**. Once
+activated, the virtual environment will change the (terminal) prompt from (PS) to (GUIenv).
+
+After starting the virtual environment, EasyGUI can be installed with the command:  
+**'python -m pip install easygui'**.  Subsequently the installation can be verified with the command: 
+**'python -m pip show easygui'**. 
+
 
 ## Usage
 There are three ways to use this small programs: (1) the Python IDLE, (2) VS Code, or (3) Windows Explorer.  
@@ -45,6 +61,7 @@ The following modules are necessary imports (imported in the .py files):
 - datetime
 - dirlist
 - pathlib
+- easygui
 
 ## Sample Output
 The image above shows a sample output:
