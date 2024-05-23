@@ -20,12 +20,14 @@ def file_title( o_file, path ):
     title = 'Scan created on ' + date.strftime("%A") + ' ' + date.strftime("%x") + '\n'
     o_file.write( title )
 
-    title = 'by: Richard Ay, Sept/Nov 2023' + '\n\n'
+    title = 'by: Richard Ay, Nov 2023 - Updated May 2024' + '\n\n'
     o_file.write( title )
     o_file.write( path+'\n' )
 
 ###################################################################################################
 # Main
+
+
 
 
 # Prompt for the starting (top level) directory to scan.
@@ -76,5 +78,14 @@ with out_path.open( mode='w', encoding='utf-8' ) as o_file:
 
     # Recursively scan all of the directories below the specified path.
     dir_list.scan_directory( path, num_blanks, file_IO, o_file )
+
+    # Summarize the number of files found
+    output_string = \
+        (f" Total Files Scanned: {total_files:,}, Total Size: {total_size:,} bytes\n")
+    
+    if( file_IO ):
+        o_file.write( output_string )
+    else:
+        print( output_string )
 
 
