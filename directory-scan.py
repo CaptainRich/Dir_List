@@ -27,9 +27,6 @@ def file_title( o_file, path ):
 ###################################################################################################
 # Main
 
-
-
-
 # Prompt for the starting (top level) directory to scan.
 
 # These three lines work, but are replaced by the GUI dialog box
@@ -79,9 +76,12 @@ with out_path.open( mode='w', encoding='utf-8' ) as o_file:
     # Recursively scan all of the directories below the specified path.
     dir_list.scan_directory( path, num_blanks, file_IO, o_file )
 
-    # Summarize the number of files found
-    output_string = \
-        (f" Total Files Scanned: {total_files:,}, Total Size: {total_size:,} bytes\n")
+    # Summarize the number of files found, acquire the global variable values.
+    total_size, total_files = dir_list.report_sizes()
+
+    output_string  = (f"\n\n=========================================================")
+    output_string += (f"\nTotal Files Scanned: {total_files:,}")
+    output_string += (f", Total Size: {total_size:,} bytes\n")
     
     if( file_IO ):
         o_file.write( output_string )

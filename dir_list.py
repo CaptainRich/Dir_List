@@ -70,3 +70,6 @@ def scan_directory( path, num_blanks, file_IO, o_file ):
 
 
 #################################################################################################
+# Function to return the total number of files scanned and the total size.
+def report_sizes( ):
+    return( total_size, total_files )
