@@ -43,7 +43,7 @@ There are three ways to use this small programs: (1) the Python IDLE, (2) VS Cod
 2) From VSCode, by issuing the command 'python directory-scan.py' in the Terminal window. For VS Code it is important to change the Terminal from "Git Bash" to "Power Shell". Once in Power Shell, the command "python [filename].py" will run the file with the output going to the output file (user specified).  Note the suffix ".py" is required.
 
 3) By double-clicking 'directory-scan.exe' from Windows Explorer.  Note this option requires that the Python script and associated libraries be bundled into an exe.  This is
-accomplished by using 'pyinstaller', as discussed below.
+accomplished by using 'pyinstaller', as discussed above.
 
 The program prompts for two data items:
 1) The name of the output (text) file.
