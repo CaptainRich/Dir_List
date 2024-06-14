@@ -20,7 +20,7 @@ def file_title( o_file, path ):
     title = 'Scan created on ' + date.strftime("%A") + ' ' + date.strftime("%x") + '\n'
     o_file.write( title )
 
-    title = 'by: Richard Ay, Nov 2023 - Updated May 2024' + '\n\n'
+    title = 'by: Richard Ay, Nov 2023 - Updated June 2024' + '\n\n'
     o_file.write( title )
     o_file.write( path+'\n' )
 
@@ -42,22 +42,22 @@ path = gui.diropenbox(
     title   = "Select the target directory:"
 )
 
+# Exit if [Cancel] was clicked
+if( path is None ) or ( len(path) < 1 ):
+    exit()
+
+outfile = ""
 outfile = gui.enterbox(
     msg     = "Enter the output file name:", 
     title   = "Output File Specification"
 )
 
+# Exit if [Cancel] was clicked
+if( outfile is None ) or ( len(outfile) < 1 ):
+    exit()
+
 #print( "Specified pathname: ", path )
 #print( "Output file is:     ", outfile )
-
-# Verify the necessary information was defined.
-if( path is None ) or ( outfile is None ):
-    exit()
-
-if( len(path) < 1 ) or ( len(outfile) < 1 ):
-    exit()
-
-
 
 num_blanks = 2         # The initial indentation for the top level directory
 file_IO    = True      # Output is sent to a text file

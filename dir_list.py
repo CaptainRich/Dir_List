@@ -50,8 +50,11 @@ def scan_directory( path, num_blanks, file_IO, o_file ):
                         file_size += os.path.getsize( file_path )
                 
                 # Print or write the directory name with its information.
+                name_length = num_blanks + len(entry.name)
+                num_dash    = 60 - name_length
+
                 output_string = \
-                    (f"{' '*num_blanks}{entry.name} -----> {num_files} files,  {file_size:,} bytes\n")
+                    (f"{' '*num_blanks}{entry.name} {'-'*num_dash}> {num_files:3} files,  {file_size:13,} bytes\n")
                 
                 if( file_IO ):
                     o_file.write( output_string )
