@@ -31,7 +31,7 @@ After starting the virtual environment, EasyGUI can be installed with the comman
 
 The bundling utility 'PyInstaller' must also be installed to the virtual environment.  This is necessary to produce an EXE that can be run from Windows (without
 starting VSCode and activating the virtual environment).
-**'python -m pip install pyinstaller'**.  To bundle the required files into an EXE, issue the command **"pyinstaller --noconsole directory-scan.py"** from the 
+**'python -m pip install pyinstaller'**.  To bundle the required files into an EXE, issue the command **"pyinstaller --noconsole --onefile directory-scan.py"** from the 
 active virtual environment.
 
 
