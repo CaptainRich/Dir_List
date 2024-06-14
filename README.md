@@ -29,6 +29,11 @@ After starting the virtual environment, EasyGUI can be installed with the comman
 **'python -m pip install easygui'**.  Subsequently the installation can be verified with the command: 
 **'python -m pip show easygui'**. 
 
+The bundling utility 'PyInstaller' must also be installed to the virtual environment.  This is necessary to produce an EXE that can be run from Windows (without
+starting VSCode and activating the virtual environment).
+**'python -m pip install pyinstaller'**.  To bundle the required files into an EXE, issue the command **"pyinstaller --noconsole directory-scan.py"** from the 
+active virtual environment.
+
 
 ## Usage
 There are three ways to use this small programs: (1) the Python IDLE, (2) VS Code, or (3) Windows Explorer.  
@@ -37,7 +42,8 @@ There are three ways to use this small programs: (1) the Python IDLE, (2) VS Cod
 
 2) From VSCode, by issuing the command 'python directory-scan.py' in the Terminal window. For VS Code it is important to change the Terminal from "Git Bash" to "Power Shell". Once in Power Shell, the command "python [filename].py" will run the file with the output going to the output file (user specified).  Note the suffix ".py" is required.
 
-3) By double-clicking 'directory-scan.py' from Windows Explorer.
+3) By double-clicking 'directory-scan.exe' from Windows Explorer.  Note this option requires that the Python script and associated libraries be bundled into an exe.  This is
+accomplished by using 'pyinstaller', as discussed below.
 
 The program prompts for two data items:
 1) The name of the output (text) file.
@@ -50,6 +56,7 @@ Once this data is entered, the scan commences and the output file is generated. 
 1. Python for You and Me, Kushal Das, Feb 17, 2021  
 2. Python Basics: A practical Introduction to Python 3, David Amos, Dan Bader, 2022  
 3. Python Ultimate Guide (web download, source unknown) 
+4. Automate The Boring Stuff with Python, Al Sweigart, 2020
 
 ## File List
 **dir_list.py** - a small module with the 'worker' routines.  

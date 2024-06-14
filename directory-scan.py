@@ -6,6 +6,7 @@
 import pathlib            # Module needed for file I/O
 import dir_list           # Module with various directory/disk functions
 import datetime           # Used to time-stamp the output file
+import sys                # To use sys.exit()
 import easygui as gui     # For the data acquisition dialog box
 
 
@@ -44,7 +45,7 @@ path = gui.diropenbox(
 
 # Exit if [Cancel] was clicked
 if( path is None ) or ( len(path) < 1 ):
-    exit()
+    sys.exit()
 
 outfile = ""
 outfile = gui.enterbox(
@@ -54,7 +55,7 @@ outfile = gui.enterbox(
 
 # Exit if [Cancel] was clicked
 if( outfile is None ) or ( len(outfile) < 1 ):
-    exit()
+    sys.exit()
 
 #print( "Specified pathname: ", path )
 #print( "Output file is:     ", outfile )
